@@ -14,7 +14,6 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    // Bungkus SELURUH aplikasi dengan AuthProvider
     <AuthProvider>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>

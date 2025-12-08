@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Ionicons } from '@expo/vector-icons'; // <--- Import Ionicons
+import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
@@ -12,10 +12,10 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarShowLabel: false, // Sembunyikan label/tulisan
+        tabBarShowLabel: false, 
       }}>
       <Tabs.Screen
-        name="auth" // Ini akan merujuk ke app/(tabs)/auth.tsx
+        name="auth"
         options={{
           title: 'Auth',
           tabBarIcon: ({ color, size }) => (
@@ -24,7 +24,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="vote" // Ini akan merujuk ke app/(tabs)/vote.tsx
+        name="vote"
         options={{
           title: 'Vote',
           tabBarIcon: ({ color, size }) => (
@@ -33,7 +33,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile" // Ini akan merujuk ke app/(tabs)/profile.tsx
+        name="profile"
         options={{
           title: 'Profile',
           tabBarIcon: ({ color, size }) => (

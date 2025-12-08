@@ -17,20 +17,17 @@ interface UserProfile {
   angkatan: string;
 }
 
-// Definisikan tipe untuk state context
 interface AuthContextType {
-  user: User | null; // Dari Firebase Auth
-  profile: UserProfile | null; // Dari Firestore
+  user: User | null; 
+  profile: UserProfile | null; 
   loading: boolean;
   login: (email: string, pass: string) => Promise<void>;
   register: (email: string, pass: string, profileData: Omit<UserProfile, 'email'>) => Promise<void>;
   logout: () => Promise<void>;
 }
 
-// Kunci untuk menyimpan profil di MMKV
 const PROFILE_STORAGE_KEY = 'userProfile';
 
-// Buat Context
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Buat Provider
